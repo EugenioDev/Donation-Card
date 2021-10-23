@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="donation-container">
+      <div class="donation-inner">
+        <h1>
+          Donate for our <br />
+          cause
+        </h1>
+        <p>I would like to contribute:</p>
+        <div class="donate-input">
+          <span>$/EUR</span>
+          <input type="number" id="inputDonation" />
+        </div>
+        <div class="donate-button">
+          <button id="donate">Next Step</button>
+        </div>
+      </div>
+    </div>
+    <!-- Personal Information -->
+    <div class="personal-information-container">
+      <div class="personal-information__inner">
+        <h1>Personal info</h1>
+        <div class="donation-info">
+          <p>Donation total</p>
+          <p>$ / Eur <span id="donation-input-value"></span></p>
+        </div>
+        <form class="form" id="form">
+          <div class="inputName">
+            <label for="name">First name</label>
+            <input type="text" for="name" placeholder="Enter your first name" id="name"/>
+          </div>
+          <div class="inputLastName">
+            <label for="lastName">Last name</label>
+            <input
+              type="text"
+              for="lastName"
+              placeholder="Enter your last name"
+              id="lastName"
+            />
+          </div>
+          <div class="inputEmail">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              for="email"
+              placeholder="Enter your email address"
+              id="email"
+            />
+          </div>
+
+          <div class="donate-button">
+            <button id="donate" type="submit">Donate now</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
