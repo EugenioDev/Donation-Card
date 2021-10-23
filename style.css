@@ -95,6 +95,14 @@ input::-webkit-inner-spin-button {
   transform: scale(0.95);
 }
 
+.messageError {
+  margin-top: 20px;
+}
+.messageString {
+  color: white;
+  margin: 0;
+}
+
 /* Personal Information */
 .personal-information-container {
   width: max-content;

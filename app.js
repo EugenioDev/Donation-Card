@@ -15,21 +15,18 @@ document.addEventListener("DOMContentLoaded", function () {
     ".personal-information-container"
   );
 
+  const error = document.querySelector('.messageString')
   function checkInputs(number, msg) {
     const innerContainer = document.querySelector(".donation-inner");
     const outerButton = document.getElementById("donate-button");
-    if (number === "" || number === undefined) {
-      const containerMessage = document.createElement("div");
-      const message = document.createElement("p");
-      message.textContent = msg;
-      containerMessage.appendChild(message);
-      containerMessage.style.marginTop = 15 + "px";
-      innerContainer.append(containerMessage);
+    if (number == "") {
+      error.textContent = msg
     } else if (number > 0) {
       smallContainer.style.display = "none";
       profileContainer.style.display = "block";
     }
   }
+  
 
   form.addEventListener("submit", (event) => {
     const form = document.getElementById("form");
@@ -48,21 +45,16 @@ document.addEventListener("DOMContentLoaded", function () {
       "I campi non possono essere vuoti"
     );
   });
-
+  const errorForm = document.querySelector('.error')
   function checkPersonalInfo(name, lastName, email, mess) {
     if (name == "" || lastName == "" || email === "") {
-      const containerMessage = document.createElement("div");
-      const message = document.createElement("p");
-      message.textContent = mess;
-      message.style.fontSize = 12 + "px";
-      message.style.textAlign = "center";
-      containerMessage.appendChild(message);
-      containerMessage.style.marginTop = 15 + "px";
-      form.append(containerMessage);
+      errorForm.textContent = mess
     } else {
-      form.lastElementChild.remove()
-      alert('Thank you for Donation')
-      form.submit()
+      
+      errorForm.textContent = "Grazie per aver Donato"
+      setTimeout(function(){ 
+        form.submit(); }, 2000)
+      
     }
   }
 });
